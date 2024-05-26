@@ -4,14 +4,32 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+       <div class="d-flex align-items-center">
+           <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+           </div>
+           <h5 class="card-title">Total Number of Post:</span></h5>
+           <div class="d-flex align-items-center">
+                <div class="card-body">
+                    <div class="ps-5">
+                        <h2>{{ $Posts }}</h2>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div>                                                                                         
+           <h5 class="card-title">Total Unpublished Post:</span></h5>
+           <div class="d-flex align-items-center">
+                <div class="card-body">
+                    <div class="ps-5">
+                        <h2>{{ $UnpublishedPosts }}</h2>
+                    </div>
+                </div>
+            </div>        
+            <h5 class="card-title">Total Published Post:</span></h5>
+           <div class="d-flex align-items-center">
+                <div class="card-body">
+                    <div class="ps-5">
+                        <h2>{{ $PublishedPosts }}</h2>
+                    </div>
+                </div>
+            </div> 
+       </div>  
 </x-app-layout>
